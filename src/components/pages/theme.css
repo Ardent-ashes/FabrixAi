@@ -1,0 +1,239 @@
+
+:root { 
+  --gradient-start: #122762; 
+  --gradient-end: #0d1633;
+  
+  --input-bg: #0d1633;
+  --input-border: #FFD700;
+  --input-text: #FFFFFF;
+  --button-bg: #FFD700;
+  --button-hover: #F0C800;
+  --button-text: #0d1633;
+
+}
+
+.gradient-background { 
+  background-color: #0d1633; /* fallback */
+  background-image: 
+    radial-gradient(circle at center, #122762 0%, #0d1633 100%);
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/src/assets/line.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  filter: invert(1);
+  pointer-events: none;
+}
+
+.centered-image { 
+  max-width: 100%; 
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* Form element styles */
+input, textarea, select {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--input-text);
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--input-border);
+}
+
+button.primary {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button.primary:hover {
+  background-color: var(--button-hover);
+}
+
+/* Social button styles */
+.social-button {
+  background-color: white;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.social-button:hover {
+  background-color: #f3f4f6;
+}
+
+
+
+.submit-button {
+  width: 100%;
+  background-color: #EAB308; 
+  color: #0d1633;
+  font-weight: 700; 
+  padding-top: 0.75rem; 
+  padding-bottom: 0.75rem;
+  padding-left: 1rem; 
+  padding-right: 1rem;
+  border-radius: 0.375rem; 
+  transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+  transform: scale(1); /* base scale */
+}
+
+/* Hover state */
+.submit-button:hover {
+  background-color: #d9a300; /* hover:bg-[#F0C800] */
+  transform: scale(1.02); /* hover:scale-[1.02] */
+}
+
+/* Active (clicked) state */
+.submit-button:active {
+  transform: scale(0.98); /* active:scale-[0.98] */
+}
+
+.selection-button {
+  width: 60%;
+  height: 5rem; /* h-20 in tailwind is 5rem */
+  border-radius: 0.375rem; /* rounded-md */
+  padding-left: 1.5rem; /* px-6 */
+  padding-right: 1.5rem;
+  font-weight: 500; /* font-medium */
+  transition: all 0.3s ease; /* transition-all */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: #0d1633;
+  color: white;
+  border: 1px solid #EAB308;
+}
+
+.selection-button:hover {
+  background-color:  #EAB308; /* hover:bg-opacity-80 */
+}
+.selection-button:active {
+  transform: scale(0.98); /* active:scale-[0.98] */
+}
+
+
+.selection-button.selected {
+  background-color: #EAB308;
+  color: #EAB308;
+  border-color: #EAB308;
+}
+
+.progress-container {
+   width: 20%;
+  position: fixed;
+  bottom: 3vh; /* Fixed distance from bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 50; /* Ensure it's above other content */
+}
+
+.progress-track {
+  width: 100%;
+  background-color: #0d1633;
+  border-radius: 9999px; /* rounded-full */
+  height: 0.625rem; /* h-2.5 */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.progress-bar {
+  background-color: #EAB308;
+  height: 0.625rem; /* h-2.5 */
+  border-radius: 9999px; /* rounded-full */
+}
+
+.progress-indicator {
+  text-align: right;
+  color: white;
+  font-size: 0.875rem; /* text-sm */
+}
+
+select option {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  /* Smooth transitions for all interactive elements */
+  input, button, select {
+    transition: all 0.2s ease;
+  }
+
+  .platform-button {
+  width: 100%;
+  padding: 1.5rem; /* p-6 */
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 2px solid rgba(255, 215, 0, 0.5); /* border-[#FFD700]/50 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.platform-button {
+  width: 100%;
+  padding: 1.5rem; /* p-6 */
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 2px solid rgba(255, 215, 0, 0.5); /* border-[#FFD700]/50 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: white; /* default text color */
+}
+
+.platform-button:hover {
+  border-color: #EAB308;
+}
+
+.platform-button.selected {
+  border-color: #EAB308;
+  background-color: #EAB308;
+  color: #0d1633; /* Set text color to dark/navy when selected */
+}
+
+.platform-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* gap-3 */
+}
+
+.platform-icon {
+  height: 1.5rem; /* h-6 */
+  width: 1.5rem;
+}
+
+.platform-dot {
+  color: #EAB308;
+  font-size: 1.25rem; /* text-xl */
+}
+
+.platform-name {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+}
+
+.platform-name.other {
+  color: #EAB308;
+}
+
+
+
