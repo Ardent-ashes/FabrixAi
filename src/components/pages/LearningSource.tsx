@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logoImage from "../../assets/logo.png";
 import Name from "../../assets/name.png";
-import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 function LearningSourcePage() {
   const navigate = useNavigate();
-  const [selectedSource, setSelectedSource] = useState(null);
+  const [selectedSource] = useState(null);
 
-  const handleSelection = (source: string | React.SetStateAction<null>) => {
+  const handleSelection = (_source: string | React.SetStateAction<null>) => {
     // setSelectedSource(source);
     // localStorage.setItem('learningSource', source);
     // Navigate to the next page

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logoImage from "../../assets/logo.png";
 import Name from "../../assets/name.png";

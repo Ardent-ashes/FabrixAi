@@ -5,9 +5,9 @@ import Name from "../../assets/name.png";
 
 function UserTypeSelection() {
   const navigate = useNavigate();
-  const [selectedType, setSelectedType] = useState(null);
+  const [selectedType] = useState(null);
 
-  const handleSelection = (type: string | React.SetStateAction<null>) => {
+  const handleSelection = (_type: string | React.SetStateAction<null>) => {
     // setSelectedType(type);
     // localStorage.setItem('userType', type);
     navigate('/learning');
