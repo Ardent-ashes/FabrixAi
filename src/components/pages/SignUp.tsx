@@ -63,7 +63,7 @@ function Signup() {
             </div>
             
             <div className="mb-4">
-              <label htmlFor="email" className="block text-white text-sm mb-2">Gmail</label>
+              <label htmlFor="email" className="block text-white text-sm mb-2">GGmail</label>
               <input
                 type="email"
                 id="email"
