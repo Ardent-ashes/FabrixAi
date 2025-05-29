@@ -26,7 +26,7 @@ function SocialMediaPage() {
   const handleContinue = () => {
     // Save selected platforms
     localStorage.setItem('socialMediaPlatforms', JSON.stringify(selectedPlatforms));
-    navigate('/next-step');
+    navigate('/worktype');
   };
 
   return (
@@ -45,7 +45,7 @@ function SocialMediaPage() {
         <div className="w-[40%] max-w-3xl">
          
           <div className="text-center mb-10">
-            <h1 className="text-3xl font-bold text-[#FFD700] mb-3">Add your Social Media</h1>
+            <h1 className="text-3xl font-bold text-[#EAB308] mb-3">Add your Social Media</h1>
             <p className="text-white">This helps us sync everything, that help your team do their best work.</p>
           </div>
 
@@ -75,10 +75,11 @@ function SocialMediaPage() {
           {/* Skip/Continue Button */}
           {selectedPlatforms.length > 0 && (
             <div>
-              <button 
+               <button 
                 type="submit"
                 className="submit-button"
                 onClick={handleContinue}
+                style={{ maxHeight: '60px', width: '300px',right: '50%', transform: 'translateX(28%)' }}
               >
                 Continue
               </button>

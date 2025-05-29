@@ -37,7 +37,7 @@ function EmploymentDetailsPage() {
 
   return (
     <div className="gradient-background flex justify-center items-center min-h-screen p-5">
-      <div className="w-full max-w-6xl flex flex-col items-center">
+      <div className="w-full max-w-6xl flex flex-col items-center z-18">
         {/* Logo and Name */}
         <div className="flex justify-center pb-6">
           <img src={logoImage} alt="Logo" className="h-16 md:h-20" />
@@ -70,7 +70,7 @@ function EmploymentDetailsPage() {
                   id="employer"
                   value={formData.employer}
                   onChange={(e) => handleInputChange('employer', e.target.value)}
-                  className="w-full h-12 rounded-md bg-[#0d1633] border border-[#FFD700] px-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] placeholder-gray-400"
+                  className="w-full h-12 rounded-md bg-[#0d1633] border border-[#EAB308] px-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] placeholder-gray-400"
                   placeholder="Enter employer name"
                   required
                 />
@@ -86,7 +86,7 @@ function EmploymentDetailsPage() {
                   id="role"
                   value={formData.role}
                   onChange={(e) => handleInputChange('role', e.target.value)}
-                  className="w-full h-12 rounded-md bg-[#0d1633] border border-[#FFD700] px-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] placeholder-gray-400"
+                  className="w-full h-12 rounded-md bg-[#0d1633] border border-[#EAB308] px-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] placeholder-gray-400"
                   placeholder="Enter your role"
                   required
                 />
@@ -102,7 +102,7 @@ function EmploymentDetailsPage() {
                   <select
                     value={formData.countryCode}
                     onChange={(e) => handleInputChange('countryCode', e.target.value)}
-                    className="h-12 rounded-md bg-[#0d1633] border border-[#FFD700] px-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] appearance-none cursor-pointer"
+                    className="h-12 rounded-md bg-[#0d1633] border border-[#EAB308] px-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] appearance-none cursor-pointer"
                     style={{ minWidth: '120px' }}
                   >
                     {countryCodes.map((country) => (
@@ -121,7 +121,7 @@ function EmploymentDetailsPage() {
                     id="phone"
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="flex-1 h-12 rounded-md bg-[#0d1633] border border-[#FFD700] px-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] placeholder-gray-400"
+                    className="flex-1 h-12 rounded-md bg-[#0d1633] border border-[#EAB308] px-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] placeholder-gray-400"
                     placeholder="Phone number"
                     required
                   />

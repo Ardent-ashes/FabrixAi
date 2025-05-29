@@ -15,7 +15,7 @@ function UserTypeSelection() {
 
   return (
     <div className="gradient-background flex justify-center items-center min-h-screen p-5">
-      <div className="w-full max-w-6xl flex flex-col items-center">
+      <div className="w-full max-w-6xl flex flex-col items-center z-10">
         {/* Logo and Name */}
         <div className="flex justify-center pb-6">
           <img src={logoImage} alt="Logo" className="h-16 md:h-20" />
@@ -30,12 +30,12 @@ function UserTypeSelection() {
           
         >
           <div className="text-center mb-10">
-            <h1 className="text-3xl font-bold text-[#FFD700] mb-3">What describes you most?</h1>
+            <h1 className="text-3xl font-bold text-[#EAB308] mb-3">What describes you most?</h1>
             <p className="text-white">This helps us suggest templates that help your team do their best work.</p>
           </div>
           
           {/* Selection buttons */}
-          <div className="space-y-6 mb-10">
+          <div className="space-y-4 mb-16">
             <button 
               onClick={() => handleSelection('garments')}
               className={`selection-button ${selectedType === 'garments' ? 'selected' : ''}`}

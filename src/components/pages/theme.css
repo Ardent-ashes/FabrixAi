@@ -4,10 +4,10 @@
   --gradient-end: #0d1633;
   
   --input-bg: #0d1633;
-  --input-border: #FFD700;
+  --input-border: #EAB308;
   --input-text: #FFFFFF;
-  --button-bg: #FFD700;
-  --button-hover: #F0C800;
+  --button-bg: #EAB308;
+  --button-hover: #EAB308;
   --button-text: #0d1633;
 
 }
@@ -33,7 +33,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.1;
+  opacity: 0.05;
   filter: invert(1);
   pointer-events: none;
 }
@@ -175,30 +175,23 @@ select option {
     transition: all 0.2s ease;
   }
 
-  .platform-button {
-  width: 100%;
-  padding: 1.5rem; /* p-6 */
-  border-radius: 0.75rem; /* rounded-xl */
-  border: 2px solid rgba(255, 215, 0, 0.5); /* border-[#FFD700]/50 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  background: transparent;
+.platform-button {
+  width: 60%;
+  height: 5rem; /* h-20 */
+  border-radius: 0.375rem; /* rounded-md */
+  font-weight: 500; /* font-medium */
+  transition: all 0.3s ease; /* transition-all */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex; /* make it a flex container */
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center (optional) */
+  background-color: #0d1633;
+  color: white;
+  border: 1px solid #EAB308;
 }
 
-.platform-button {
-  width: 100%;
-  padding: 1.5rem; /* p-6 */
-  border-radius: 0.75rem; /* rounded-xl */
-  border: 2px solid rgba(255, 215, 0, 0.5); /* border-[#FFD700]/50 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  background: transparent;
-  color: white; /* default text color */
-}
+
 
 .platform-button:hover {
   border-color: #EAB308;

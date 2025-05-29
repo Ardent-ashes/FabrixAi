@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import logoImage from "../../assets/logo.png";
 import Name from "../../assets/name.png";
 import Google from "../../assets/google.png";
+import Gmail from "../../assets/gmail.png";
+import FB from "../../assets/facebook.png";
 
 function Signup() {
   const [userName, setUserName] = useState('');
@@ -108,7 +110,7 @@ function Signup() {
             
             <button 
               type="submit"
-              className="w-full bg-[#FFD700] hover:bg-[#F0C800] text-[#0d1633] font-bold py-3 px-4 rounded-md transition duration-300 ease-in-out"
+              className="submit-button"
             >
               Sign Up
             </button>
@@ -116,9 +118,11 @@ function Signup() {
           
          
         </div>
-         <div className="mt-6 text-center text-white">
+
+        
+         <div className="mt-6 text-center text-white ">
             <p>or connect with</p>
-            <div className="flex justify-center space-x-4 mt-4">
+            <div className="flex justify-center space-x-8 mt-4 ">
              <button 
   onClick={() => handleExternalRedirect('https://google.com')}
   className=" p-2 rounded-md border border-[#FFD700] hover:bg-[#1a2238] transition"
@@ -126,25 +130,29 @@ function Signup() {
         <img
           src={Google} 
           alt="Google Logo"
-          className="h-8 w-8"
+          className="h-10 w-10"
         />
       </button>
 
               <button 
                 onClick={() => handleExternalRedirect('https://facebook.com')}
-                className="bg-white p-2 rounded-md hover:bg-gray-200 transition"
+                className="p-2 rounded-md border border-[#FFD700] hover:bg-[#1a2238] transition"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                  <path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
+                <img
+          src={FB} 
+          alt="Google Logo"
+          className="h-10 w-10"
+        />
               </button>
               <button 
                 onClick={() => handleExternalRedirect('mailto:example@example.com')}
-                className="bg-white p-2 rounded-md hover:bg-gray-200 transition"
+                className="p-2 rounded-md border border-[#EAB308] hover:bg-[#d9a300] transition"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                  <path fill="#EA4335" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1 14H5c-.55 0-1-.45-1-1V7l7.5 4.5c.28.17.64.17.91 0L20 7v10c0 .55-.45 1-1 1z" />
-                </svg>
+                 <img
+          src={Gmail} 
+          alt="Google Logo"
+          className="h-10 w-10"
+        />
               </button>
             </div>
           </div>
@@ -153,8 +161,8 @@ function Signup() {
             <p className="text-white">
               Already have an account? 
               <button 
-                onClick={() => navigate('/login')} 
-                className="ml-1 text-[#FFD700] hover:underline focus:outline-none"
+                onClick={() => navigate('/signup')} 
+                className="ml-1 text-[#EAB308] hover:underline focus:outline-none"
               >
                 Login
               </button>
@@ -165,7 +173,7 @@ function Signup() {
         {/* Right Side - Info */}
         <div className="w-full md:w-[40%] text-white flex flex-col justify-center">
           <div className="bg-opacity-20 bg-black backdrop-blur-sm rounded-2xl p-8 border border-gray-700 text-center mb-6">
-            <h5 className="text-xl md:text-2xl font-bold text-[#FFD700] mb-4">
+            <h5 className="text-xl md:text-2xl font-bold text-[#EAB308] mb-4">
               Book a demo to see how FabricX can transform your factory floor into a smooth, data-driven engine.
             </h5>
            
@@ -173,20 +181,20 @@ function Signup() {
           <div className="flex justify-center pb-6">
           <button 
               onClick={() => handleExternalRedirect('https://calendly.com')}
-              className="w-full bg-[#FFD700] hover:bg-[#F0C800] text-[#0d1633] font-bold py-3 px-4 rounded-md transition duration-300 ease-in-out mt-4"
+              className="w-full bg-[#EAB308] hover:bg-[#d9a300] text-[#0d1633] font-bold py-3 px-4 rounded-md transition duration-300 ease-in-out mt-4"
             >
               Book A demo
             </button>
         </div>
            
           
-          <div className="bg-opacity-20 bg-black backdrop-blur-sm rounded-2xl p-4 border border-[#FFD700] border-dashed">
-  <p className="text-center text-[#FFD700] font-bold mb-2 text-sm md:text-base">
+          <div className="bg-opacity-20 bg-black backdrop-blur-sm rounded-2xl p-4 border border-[#EAB308] border-dashed">
+  <p className="text-center text-[#EAB308] font-bold mb-2 text-sm md:text-base">
     All-in-one business management system built specifically for fabric and garment manufacturers.
   </p>
-  <p className="text-xs md:text-sm text-center">
+  {/* <p className="text-xs md:text-sm text-center">
     It streamlines production, inventory, order tracking, and client communications into one intuitive platform. With real-time insights, automated workflows, and tailored reporting, FabricX helps you reduce manual errors, improve delivery timelines, and maximize operational efficiency without the tech headache.
-  </p>
+  </p> */}
 </div>
 
         </div>

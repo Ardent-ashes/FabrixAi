@@ -17,14 +17,7 @@ function LearningSourcePage() {
   return (
     <div className="gradient-background flex justify-center items-center min-h-screen p-5">
       
-      {/* Geometric pattern overlay */}
-      <div className="absolute inset-0 z-0" 
-           style={{
-             backgroundImage: 'url("/geometric-pattern.svg")', 
-             backgroundSize: 'cover',
-             opacity: 0.2
-           }}>
-      </div>
+     
       
       <div className="w-full max-w-6xl flex flex-col items-center z-10">
         {/* Logo and Name */}
@@ -36,9 +29,9 @@ function LearningSourcePage() {
         </div>
         
         {/* Main content area */}
-        <div className="w-full max-w-3xl rounded-2xl p-8">
+        <div className="w-full max-w-3xl rounded-2xl p-8 ">
           <div className="text-center mb-12">
-            <h1 className="text-3xl font-bold text-[#FFD700] mb-3">How did you learn about us?</h1>
+            <h1 className="text-3xl font-bold text-[#EAB308] mb-3">How did you learn about us?</h1>
           </div>
           
           {/* Selection buttons */}

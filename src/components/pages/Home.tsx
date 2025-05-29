@@ -8,14 +8,14 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function About() {
+function Home() {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('/signup');
   };
   return (
-    <div className="gradient-background"  onClick={handleClick}>
-      <div className="container mx-auto px-4 py-8">
+    <div className="gradient-background flex justify-center items-center min-h-screen p-5"  onClick={handleClick}>
+      <div className="w-full max-w-6xl flex flex-col items-center z-20">
         <img 
           src={logoImage}  
           alt="About Us"
@@ -34,7 +34,7 @@ function About() {
         
       </div>
       
-      <div className="container mx-auto px-4 py-8">
+      <div className="flex justify-center pb-6">
         <img 
           src={Name}  // Use the imported variable
           alt="About Us"
@@ -55,4 +55,4 @@ function About() {
   );
 }
 
-export default About;
+export default Home;

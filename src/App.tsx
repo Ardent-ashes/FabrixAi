@@ -9,6 +9,9 @@ import LearningSourcePage from "./components/pages/LearningSource";
 import EmployeeDetails from "./components/pages/EmployeeDetails";
 import EmailVerification from "./components/pages/EmailVerification";
 import SocialMedia from "./components/pages/SocialMedia";
+import WorkType from "./components/pages/WorkType"
+import CustomDomain from "./components/pages/CustomDomain"
+import Complete from "./components/pages/Complete";
 
 
 function App() {
@@ -24,6 +27,11 @@ function App() {
         <Route path="/employeedetails" element={<EmployeeDetails />} />
         <Route path="/emailverification" element={<EmailVerification />} />
         <Route path="/socialmedia" element={<SocialMedia />} />
+        <Route path="/worktype" element={<WorkType />} />
+        <Route path="/customdomain" element={<CustomDomain />} />
+        <Route path="/complete" element={<Complete />} />
+        
+        {/* Add more routes as needed */}
 
       </Routes>
     </Layout>
