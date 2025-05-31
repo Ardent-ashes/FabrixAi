@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logoImage from "../../assets/logo.png";
@@ -6,8 +7,10 @@ import Name from "../../assets/name.png";
 function EmploymentDetailsPage() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    employer: '',
-    role: '',
+    company: '',
+    email: '',
+    website: '',
+    location: '',
     countryCode: '+880',
     phone: ''
   });
@@ -46,21 +49,27 @@ function EmploymentDetailsPage() {
         </div>
 
         {/* Main content area */}
+          
         <div className="w-full max-w-md">
           <form onSubmit={handleContinue}>
-            <div className="form-container">
+          <div
+            className="form-container"
+            
+          >
+           
+          
               {/* Employer Field */}
               <div className="mb-6">
-                <label htmlFor="employer" className="form-label">
-                  Employer
+                <label htmlFor="company" className="form-label">
+                  Company
                 </label>
                 <input
                   type="text"
-                  id="employer"
-                  value={formData.employer}
-                  onChange={(e) => handleInputChange('employer', e.target.value)}
+                  id="company"
+                  value={formData.company}
+                  onChange={(e) => handleInputChange('company', e.target.value)}
                   className="form-input w-full h-10 md:h-12"
-                  placeholder="Enter employer name"
+                  placeholder="Enter company name"
                   required
                 />
               </div>
@@ -68,15 +77,47 @@ function EmploymentDetailsPage() {
               {/* Role Field */}
               <div className="mb-6">
                 <label htmlFor="role" className="form-label">
-                  Role
+                  Work Email*
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
+                  className="form-input w-full h-10 md:h-12"
+                  placeholder="Enter your Email"
+                  required
+                />
+              </div>
+
+               {/* Role Field */}
+              <div className="mb-6">
+                <label htmlFor="website" className="form-label">
+                  Website*
                 </label>
                 <input
                   type="text"
-                  id="role"
-                  value={formData.role}
-                  onChange={(e) => handleInputChange('role', e.target.value)}
+                  id="website"
+                  value={formData.website}
+                  onChange={(e) => handleInputChange('website', e.target.value)}
                   className="form-input w-full h-10 md:h-12"
-                  placeholder="Enter your role"
+                  placeholder="Enter your website"
+                  required
+                />
+              </div>
+
+               {/* Role Field */}
+              <div className="mb-6">
+                <label htmlFor="location" className="form-label">
+                  Location
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  value={formData.location}
+                  onChange={(e) => handleInputChange('location', e.target.value)}
+                  className="form-input w-full h-10 md:h-12"
+                  placeholder="Enter your location"
                   required
                 />
               </div>
@@ -95,8 +136,8 @@ function EmploymentDetailsPage() {
                     style={{ minWidth: '120px' }}
                   >
                     {countryCodes.map((country) => (
-                      <option
-                        key={country.code}
+                      <option 
+                        key={country.code} 
                         value={country.code}
                         className="bg-[#0d1633] text-white"
                       >
@@ -116,15 +157,16 @@ function EmploymentDetailsPage() {
                   />
                 </div>
               </div>
-            </div>
 
-            {/* Submit Button */}
-            <div className="w-[60%] pt-10 mx-auto">
-              <button type="submit" className="submit-button">
-                Continue
-              </button>
-            </div>
-          </form>
+            
+            
+          </div>
+          <div className="w-[60%] pt-10 mx-auto">
+  <button type="submit" className="submit-button">
+    Continue
+  </button>
+</div>
+     </form>       
 
           {/* Progress bar */}
           <div className="mt-8">
@@ -142,3 +184,4 @@ function EmploymentDetailsPage() {
 }
 
 export default EmploymentDetailsPage;
+

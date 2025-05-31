@@ -12,6 +12,10 @@ import SocialMedia from "./components/pages/SocialMedia";
 import WorkType from "./components/pages/WorkType"
 import CustomDomain from "./components/pages/CustomDomain"
 import Complete from "./components/pages/Complete";
+import Account from "./components/pages/AccountType";
+import EmpoyeeDetailsOrg from "./components/pages/EmployeeDetailsOrg";
+import LogWithFB from "./components/pages/LoginWithFB";
+import FBAccess from "./components/pages/FBAccess";
 
 
 function App() {
@@ -30,6 +34,10 @@ function App() {
         <Route path="/worktype" element={<WorkType />} />
         <Route path="/customdomain" element={<CustomDomain />} />
         <Route path="/complete" element={<Complete />} />
+        <Route path="/accounttype" element={<Account />} />
+        <Route path="/employeedetailsorg" element={<EmpoyeeDetailsOrg />} />
+        <Route path="/loginwithfb" element={<LogWithFB />} />
+        <Route path="/fbaccess" element={<FBAccess />} />
         
         {/* Add more routes as needed */}
 

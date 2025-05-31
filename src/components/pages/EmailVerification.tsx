@@ -6,10 +6,9 @@ import Name from "../../assets/name.png";
 function EmailVerificationPage() {
   const navigate = useNavigate();
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
-  const [timeLeft, setTimeLeft] = useState(299); 
-  const [email] = useState('*******@gmail.com'); 
+  const [timeLeft, setTimeLeft] = useState(299);
+  const [email] = useState('*******@gmail.com');
 
-  // Timer countdown
   useEffect(() => {
     if (timeLeft > 0) {
       const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
@@ -23,14 +22,12 @@ function EmailVerificationPage() {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
-  const handleOtpChange = (index: number, value: string ) => {
+  const handleOtpChange = (index: number, value: string) => {
     if (value.length > 1) return;
-    
     const newOtp = [...otp];
     newOtp[index] = value;
     setOtp(newOtp);
 
-   
     if (value && index < 5) {
       const nextInput = document.getElementById(`otp-${index + 1}`);
       if (nextInput) nextInput.focus();
@@ -47,7 +44,7 @@ function EmailVerificationPage() {
   const handleVerify = () => {
     const otpCode = otp.join('');
     if (otpCode.length === 6) {
-      navigate('/socialmedia'); // Navigate to the next page
+      navigate('/socialmedia');
     }
   };
 
@@ -56,27 +53,24 @@ function EmailVerificationPage() {
   };
 
   return (
-    <div className="gradient-background flex justify-center items-center min-h-screen p-5">
+    <div className="gradient-background min-h-screen flex justify-center items-center p-5">
       <div className="w-full max-w-6xl flex flex-col items-center">
-        {/* Logo and Name */}
-        <div className="flex justify-center pb-6">
-          <img src={logoImage} alt="Logo" className="h-16 md:h-20" />
+
+         <div className="flex justify-center pb-6">
+          <img src={logoImage} alt="Logo" className="w-[15%]" />
         </div>
         <div className="flex justify-center pb-6">
-          <img src={Name} alt="Logo" className="h-16 md:h-10" />
+          <img src={Name} alt="fabricxai" className="w-[25%]" />
         </div>
 
-        {/* Main content area */}
+       
+
+        {/* Main form card */}
         <div className="w-full max-w-md">
           <div
-            className="rounded-2xl p-8 border"
-            style={{
-              backgroundImage: 'linear-gradient(to bottom right, #0D131F, #324978)',
-              borderColor: 'rgba(255, 255, 255, 0.7)',
-              borderWidth: '2px',
-            }}
+            className="form-container"         
           >
-            <div className="text-center mb-6">
+            <div className="text-center mb-6 pb-4 ">
               <h1 className="text-2xl font-bold text-white mb-3">Verify Email</h1>
               <p className="text-gray-300 text-sm">
                 We have sent an OTP to{' '}
@@ -87,8 +81,8 @@ function EmailVerificationPage() {
               </p>
             </div>
 
-            {/* OTP Input Boxes */}
-            <div className="flex justify-center gap-3 mb-6">
+            {/* OTP boxes */}
+            <div className="flex justify-center gap-3 mb-6 ">
               {otp.map((digit, index) => (
                 <input
                   key={index}
@@ -115,7 +109,7 @@ function EmailVerificationPage() {
             </p>
 
             {/* Buttons */}
-            <div className="flex gap-4">
+            <div className="flex gap-4 pb-2">
               <button
                 onClick={handleBack}
                 className="flex-1 py-3 px-4 rounded-md border-2 border-[#FFD700] text-white font-bold hover:bg-[#FFD700] hover:text-[#0d1633] transition duration-300 ease-in-out"
@@ -125,7 +119,7 @@ function EmailVerificationPage() {
               <button
                 onClick={handleVerify}
                 disabled={otp.some(digit => !digit)}
-                className={`flex-1 py-3 px-4 rounded-md font-bold transition duration-300 ease-in-out ${
+                className={`submit-button w-[50%] ${
                   otp.some(digit => !digit)
                     ? 'bg-gray-500 text-gray-300 cursor-not-allowed'
                     : 'bg-[#FFD700] text-[#0d1633] hover:bg-[#F0C800] transform hover:scale-[1.02] active:scale-[0.98]'
@@ -136,7 +130,7 @@ function EmailVerificationPage() {
             </div>
           </div>
 
-          {/* Spam folder reminder */}
+          {/* Spam reminder */}
           <p className="text-center text-gray-400 text-sm mt-4">
             didn't get it?{' '}
             <span className="text-[#FFD700] cursor-pointer hover:underline">

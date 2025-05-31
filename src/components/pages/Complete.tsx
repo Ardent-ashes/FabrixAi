@@ -11,19 +11,19 @@ function About() {
 
   return (
     <div className="gradient-background flex flex-col justify-center items-center min-h-screen p-5" onClick={handleClick}>
-      <div className="flex flex-col items-center space-y-8 z-20">
-        <img 
-          src={logoImage} 
-          alt="About Us"
-          style={{
-            maxWidth: '300px',
-            height: 'auto'
-          }}
-        />
+            <div className="w-full max-w-6xl flex flex-col items-center justify-center z-20 space-y-10">
+
+       <div className="flex justify-center">
+          <img 
+            src={logoImage} 
+            alt="Logo"
+            className="w-[40%] h-auto"
+          />
         </div>
+        
      
         
-        <div className="w-[25%] max-w-3xl p-6">
+        <div className="w-[70%] max-w-6xl p-6">
   <div 
     className="h-2 relative overflow-hidden mt-4 shadow-lg" // adds margin top and shadow
     style={{
@@ -43,6 +43,7 @@ function About() {
   </div>
 </div>
 
+      </div>
       </div>
       
       

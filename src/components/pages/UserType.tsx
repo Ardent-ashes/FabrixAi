@@ -14,19 +14,19 @@ function UserTypeSelection() {
   };
 
   return (
-    <div className="gradient-background flex justify-center items-center min-h-screen p-5">
-      <div className="w-full max-w-6xl flex flex-col items-center z-10">
+    <div className="gradient-background flex justify-center items-center min-h-screen p-5 ">
+      <div className="w-full max-w-6xl flex flex-col items-center z-10 ">
         {/* Logo and Name */}
         <div className="flex justify-center pb-6">
-          <img src={logoImage} alt="Logo" className="h-16 md:h-20" />
+          <img src={logoImage} alt="Logo" className="w-[15%]" />
         </div>
         <div className="flex justify-center pb-6">
-          <img src={Name} alt="Logo" className="h-16 md:h-10" />
+          <img src={Name} alt="Logo" className="w-[25%]" />
         </div>
         
         {/* Main content area */}
         <div 
-          className="w-full max-w-3xl rounded-2xl p-8 "
+          className="w-full max-w-2xl rounded-2xl p-4 "
           
         >
           <div className="text-center mb-10">

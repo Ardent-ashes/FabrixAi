@@ -31,18 +31,25 @@ function SocialMediaPage() {
 
   return (
     <div className="gradient-background flex justify-center items-center min-h-screen p-5">
+      <button 
+        onClick={handleContinue}
+        className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors"
+        style={{ fontSize: '16px' }}
+      >
+        Skip
+      </button>
      
       <div className="w-full max-w-6xl flex flex-col items-center">
         {/* Logo and Name */}
         <div className="flex justify-center pb-6">
-          <img src={logoImage} alt="Logo" className="h-16 md:h-20" />
+          <img src={logoImage} alt="Logo" className="w-[15%]" />
         </div>
         <div className="flex justify-center pb-6">
-          <img src={Name} alt="Logo" className="h-16 md:h-10" />
+          <img src={Name} alt="fabricxai" className="w-[25%]" />
         </div>
        
         {/* Main content area */}
-        <div className="w-[40%] max-w-3xl">
+        <div className="w-[50%] max-w-3xl z-20">
          
           <div className="text-center mb-10">
             <h1 className="text-3xl font-bold text-[#EAB308] mb-3">Add your Social Media</h1>
@@ -50,12 +57,12 @@ function SocialMediaPage() {
           </div>
 
           {/* Social Media Buttons */}
-          <div className="space-y-4 mb-10">
+          <div className="space-y-4 mb-16">
             {socialPlatforms.map((platform) => (
               <button
                 key={platform.id}
                 onClick={() => handlePlatformClick(platform.id)}
-                className={`platform-button ${selectedPlatforms.includes(platform.id) ? 'selected' : ''}`}
+                className={`platform-button  ${selectedPlatforms.includes(platform.id) ? 'selected' : ''}`}
               >
                 <div className="platform-content">
                   {platform.icon ? (
@@ -69,35 +76,49 @@ function SocialMediaPage() {
                 </div>
               </button>
             ))}
-          </div>
 
-
-          {/* Skip/Continue Button */}
-          {selectedPlatforms.length > 0 && (
-            <div>
+             {selectedPlatforms.length > 0 && (
+            <div mt-20 >
                <button 
                 type="submit"
-                className="submit-button"
+              className="submit-button w-[40%] mx-[30%]"
                 onClick={handleContinue}
-                style={{ maxHeight: '60px', width: '300px',right: '50%', transform: 'translateX(28%)' }}
+               
               >
                 Continue
               </button>
             </div>
 
+            
+
           )}
+
+            
+          </div>
+
+
+          {/* Skip/Continue Button */}
+         
           
 
           {/* Progress bar */}
-          <div className="progress-container">
-            <div className="progress-track">
-              <div className="progress-bar" style={{ width: '75%' }}></div>
+              
+              <div className="mt-8">
+            <div className="progress-container">
+              <div className="progress-track">
+                <div className="progress-bar" style={{ width: '62.5%' }}></div>
+              </div>
+              <div className="progress-indicator">5/8</div>
             </div>
-            <div className="progress-indicator">6/8</div>
           </div>
+
           
         </div>
       </div>
+
+      
+       
+
       
     </div>
   );

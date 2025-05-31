@@ -45,31 +45,26 @@ function CustomDomainPage() {
       <div className="w-full max-w-6xl flex flex-col items-center z-18">
         {/* Logo and Name */}
         <div className="flex justify-center pb-6">
-          <img src={logoImage} alt="Logo" className="h-16 md:h-20" />
+          <img src={logoImage} alt="Logo" className="w-[15%]" />
         </div>
         <div className="flex justify-center pb-6">
-          <img src={Name} alt="Logo" className="h-16 md:h-10" />
-          
+          <img src={Name} alt="fabricxai" className="w-[25%]" />
         </div>
 
         {/* Main content area */}
         <div className="w-full max-w-md">
-          <form onSubmit={handleContinue}>
+          <form onSubmit={handleContinue} >
             <div className="text-center mb-8">
               <h1 className="text-3xl font-bold text-[#EAB308] mb-3">Do you have a custom domain?</h1>
               <p className="text-white">or Build with us</p>
             </div>
 
             <div
-              className="rounded-2xl p-8 border mb-6"
-              style={{
-                backgroundImage: 'linear-gradient(to bottom right, #0D131F, #324978)',
-                borderColor: 'rgba(255, 255, 255, 0.7)',
-                borderWidth: '2px',
-              }}
+             className='form-container'
+              
             >
               {/* Custom Domain Field */}
-              <div className="mb-6">
+              <div className="mb-6" >
                 <label htmlFor="customDomain" className="block text-white text-sm mb-2">
                   Your site
                 </label>

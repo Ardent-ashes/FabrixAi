@@ -38,15 +38,15 @@ function WorkTypeSelectionPage() {
      
       <div className="w-full max-w-6xl flex flex-col items-center">
         {/* Logo and Name */}
-        <div className="flex justify-center pb-6">
-          <img src={logoImage} alt="Logo" className="h-16 md:h-20" />
+          <div className="flex justify-center pb-6">
+          <img src={logoImage} alt="Logo" className="w-[15%]" />
         </div>
         <div className="flex justify-center pb-6">
-          <img src={Name} alt="Logo" className="h-16 md:h-10" />
+          <img src={Name} alt="fabricxai" className="w-[25%]" />
         </div>
        
         {/* Main content area */}
-        <div className="w-[100%] max-w-4xl">
+        <div className="w-[100%] max-w-4xl z-20">
          
           <div className="text-center mb-10">
             <h1 className="text-3xl font-bold text-[#EAB308] mb-3">What kind of work do you do?</h1>
