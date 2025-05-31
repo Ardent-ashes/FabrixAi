@@ -23,7 +23,7 @@ function CustomDomainPage() {
   };
 
   const handleSkip = () => {
-    navigate('/next-step');
+    navigate('/complete');
   };
 
   const handleBuildWithUs = () => {
