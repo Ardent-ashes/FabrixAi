@@ -16,6 +16,7 @@ import Account from "./components/pages/AccountType";
 import EmpoyeeDetailsOrg from "./components/pages/EmployeeDetailsOrg";
 import LogWithFB from "./components/pages/LoginWithFB";
 import FBAccess from "./components/pages/FBAccess";
+import Demo from "./components/pages/demo";
 
 
 function App() {
@@ -38,6 +39,10 @@ function App() {
         <Route path="/employeedetailsorg" element={<EmpoyeeDetailsOrg />} />
         <Route path="/loginwithfb" element={<LogWithFB />} />
         <Route path="/fbaccess" element={<FBAccess />} />
+        <Route path="/demo" element={<Demo />} />
+        
+        {/* Add more routes as needed */}
+        {/* Example: <Route path="/about" element={<About />} /> */}
         
         {/* Add more routes as needed */}
 

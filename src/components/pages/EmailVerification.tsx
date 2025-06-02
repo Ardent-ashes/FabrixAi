@@ -91,7 +91,7 @@ function EmailVerificationPage() {
                   value={digit}
                   onChange={(e) => handleOtpChange(index, e.target.value)}
                   onKeyDown={(e) => handleKeyDown(index, e)}
-                  className="w-12 h-12 rounded-md bg-[#0d1633] border-2 border-[#FFD700] text-center text-white text-xl font-bold focus:outline-none focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700]"
+                  className="w-12 h-12 form-input text-xl font-bold focus:outline-none focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700]"
                   maxLength={1}
                   pattern="[0-9]"
                   inputMode="numeric"
@@ -112,7 +112,7 @@ function EmailVerificationPage() {
             <div className="flex gap-4 pb-2">
               <button
                 onClick={handleBack}
-                className="flex-1 py-3 px-4 rounded-md border-2 border-[#FFD700] text-white font-bold hover:bg-[#FFD700] hover:text-[#0d1633] transition duration-300 ease-in-out"
+                className="form-input flex-1 py-5 px-4 text-white  "
               >
                 Back
               </button>

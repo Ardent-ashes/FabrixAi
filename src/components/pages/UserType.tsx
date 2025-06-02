@@ -35,7 +35,7 @@ function UserTypeSelection() {
           </div>
           
           {/* Selection buttons */}
-          <div className="space-y-4 mb-16">
+          <div className="space-y-4 mb-16 ">
             <button 
               onClick={() => handleSelection('garments')}
               className={`selection-button ${selectedType === 'garments' ? 'selected' : ''}`}

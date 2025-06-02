@@ -50,10 +50,10 @@ function EmploymentDetailsPage() {
 
         {/* Main content area */}
           
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md z-20">
           <form onSubmit={handleContinue}>
           <div
-            className="form-container"
+            className="form-container z-10"
             
           >
            
@@ -69,6 +69,8 @@ function EmploymentDetailsPage() {
                   value={formData.company}
                   onChange={(e) => handleInputChange('company', e.target.value)}
                   className="form-input w-full h-10 md:h-12"
+                                    style={{ minHeight: '65px', maxHeight: '65px', maxWidth: '700px' }}
+
                   placeholder="Enter company name"
                   required
                 />
@@ -85,6 +87,8 @@ function EmploymentDetailsPage() {
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className="form-input w-full h-10 md:h-12"
+                                    style={{ minHeight: '65px', maxHeight: '65px', maxWidth: '700px' }}
+
                   placeholder="Enter your Email"
                   required
                 />
@@ -101,6 +105,8 @@ function EmploymentDetailsPage() {
                   value={formData.website}
                   onChange={(e) => handleInputChange('website', e.target.value)}
                   className="form-input w-full h-10 md:h-12"
+                                    style={{ minHeight: '65px', maxHeight: '65px', maxWidth: '700px' }}
+
                   placeholder="Enter your website"
                   required
                 />
@@ -117,6 +123,8 @@ function EmploymentDetailsPage() {
                   value={formData.location}
                   onChange={(e) => handleInputChange('location', e.target.value)}
                   className="form-input w-full h-10 md:h-12"
+                                    style={{ minHeight: '65px', maxHeight: '65px', maxWidth: '700px' }}
+
                   placeholder="Enter your location"
                   required
                 />
