@@ -178,7 +178,7 @@ function LandingPage() {
                 </div>
 
               {/* Action Buttons */}
-              <div className="pb-[2%]">
+              <div className="pb-[2%] z-20">
               <div className="flex gap-[4%] pt-[3%]">
                 <button
                   type="button"
@@ -256,7 +256,7 @@ function LandingPage() {
               </div>
 
               {/* Preview Button */}
-              <div className="flex justify-center pt-[5%]">
+              <div className="flex justify-center pt-[5%] z-20">
                 <button
                   type="button"
                   onClick={handlePreview}

@@ -1,12 +1,17 @@
 import { useState } from 'react';
+import About from '../Complete';
 
 // Placeholder for actual image imports
 // import heroImage from "../../assets/hero-bg.jpg";
 // import logoImage from "../../assets/logo.png";
 
-function LandingPage() {
-  const [title, setTitle] = useState('Global Apparel Partner You Can Trust');
-  const [tagline, setTagline] = useState('Delivering Excellence in Garment Manufacturing Since 1985.');
+function AboutUs() {
+  const [title, setTitle] = useState('Crafting Quality, Building Trust');
+  const [description, setdescription] = useState(' Discover our commitment to excellence and innovation. Explore our capabilities and see how we can help you achieve your goals.');
+  const [mission, setMission] = useState(' Global Approval partner you can trust');
+    const [vision, setVision] = useState(' Global Approval partner you can trust');
+
+
   const [logo, setLogo] = useState<string | null>(null);
   const [banner, setBanner] = useState<string | null>(null);
   const [showPreview, setShowPreview] = useState(false);
@@ -89,7 +94,7 @@ function LandingPage() {
                 {title}
               </h1>
               <p className="text-lg md:text-xl lg:text-2xl mb-[5%] max-w-[80%]">
-                {tagline}
+                {description}
               </p>
               <button
                 onClick={() => handleExternalRedirect('https://example.com/capabilities')}
@@ -121,7 +126,7 @@ function LandingPage() {
 <div className="gradient-background min-h-screen w-screen flex items-center justify-center py-[2%] px-[5%] xl:px-[10%] h-full">
  
       <div
-        className="flex flex-col lg:flex-row justify-center items-start w-screen h-full gap-[5%] lg:gap-[8%]"
+        className="flex flex-col lg:flex-row justify-center items-start w-screen h-full gap-[5%] lg:gap-[4%]"
         style={{ minHeight: "85%", width: "100%", maxWidth: "100%" }}
       >
        
@@ -139,7 +144,7 @@ function LandingPage() {
           {/* Header */}
           <div className="flex items-center justify-center gap-[3%] mb-[5%]">
             
-            <h1 className=" items-center justify-center text-center text-3xl md:text-4xl font-bold text-[#EAB308]">Landing page</h1>
+            <h1 className=" items-center justify-center text-center text-3xl md:text-4xl font-bold text-[#EAB308]">About Us</h1>
           </div>
 
           {/* Form Container */}
@@ -147,7 +152,7 @@ function LandingPage() {
           <div className="form-container lg:h-[90%]">
             <div className="space-y-[1%] p-[1%]">
               {/* Title Input */}
-              <div>
+              <div >                      
                 <label htmlFor="title" className="form-label">Title</label>
                 <textarea
                   id="title"
@@ -156,46 +161,57 @@ function LandingPage() {
                   className="form-input w-full text-base md:text-lg resize-none"
                   placeholder="Enter your title"
                   rows={2}
-                  style={{ minHeight: '60px' }}
+                  style={{ minHeight: '60px', padding: '10px' }}
                 />
               </div>
 
-              {/* Tagline Input */}
+              {/* description Input */}
               <div>
-                <label htmlFor="tagline" className="form-label">Tagline</label>
+                <label htmlFor="description" className="form-label">Description</label>
                 <textarea
-                  id="tagline"
-                  value={tagline}
-                  onChange={(e) => setTagline(e.target.value)}
+                  id="description"
+                  value={description}
+                  onChange={(e) => setdescription(e.target.value)}
                   className="form-input w-full text-base md:text-lg resize-none"
-                  placeholder="Enter your tagline"
+                  placeholder="Enter your description"
                   rows={2}
-                  style={{ minHeight: '60px' }}
+                  style={{ minHeight: '60px', padding: '10px' }}
+                />
+              </div>
+
+              {/* description Input */}
+              <div>
+                <label htmlFor="mission" className="form-label">Mission</label>
+                <textarea
+                  id="mission"
+                  value={mission}
+                  onChange={(e) => setMission(e.target.value)}
+                  className="form-input w-full text-base md:text-lg resize-none"
+                  placeholder="Enter your description"
+                  rows={2}
+                  style={{ minHeight: '60px', padding: '10px' }}
+                />
+              </div>
+
+               {/* description Input */}
+              <div>
+                <label htmlFor="vision" className="form-label">Vision</label>
+                <textarea
+                  id="vision"
+                  value={vision}
+                
+                  onChange={(e) => setVision(e.target.value)}
+                  className="form-input w-full text-base md:text-lg resize-none"
+                  placeholder="Enter your description"
+                  rows={2}
+                  style={{ minHeight: '60px', padding: '10px' }}
                 />
               </div>
                 </div>
                 </div>
                 </div>
 
-              {/* Action Buttons */}
-              <div className="pb-[2%]">
-              <div className="flex gap-[4%] pt-[3%]">
-                <button
-                  type="button"
-                  className="submit-button py-[4%] px-[6%] text-base flex-1"
-                  onClick={() => handleExternalRedirect('https://example.com/edit-top')}
-                >
-                  Edit Top button
-                </button>
-                <button
-                  type="button"
-                  className="submit-button py-[4%] px-[6%] text-base flex-1"
-                  onClick={() => handleExternalRedirect('https://example.com/edit-main')}
-                >
-                  Edit Main button
-                </button>
-              </div>
-              </div>
+              
               {/* Divider */}
 
 
@@ -222,7 +238,7 @@ function LandingPage() {
                     ) : (
                       <>
                       
-                        <span className="text-center">Upload LOGO here/ Drag into the box</span>
+                        <span className="text-center">Upload a Intro Video here/ Drag into the box</span>
                       </>
                     )}
                   </label>
@@ -247,7 +263,7 @@ function LandingPage() {
                     ) : (
                       <>
                         
-                        <span className="text-center">Upload Banner here/ Drag into the box</span>
+                        <span className="text-center">Upload an Image about your business here/ Drag into the box</span>
                       </>
                     )}
                   </label>
@@ -256,7 +272,7 @@ function LandingPage() {
               </div>
 
               {/* Preview Button */}
-              <div className="flex justify-center pt-[5%]">
+              <div className="flex justify-center pt-[5%] z-20">
                 <button
                   type="button"
                   onClick={handlePreview}
@@ -265,9 +281,19 @@ function LandingPage() {
                   Preview
                 </button>
               </div>
+              
             
         
         </div>
+         <div className="flex flex-col pt-[20%] "> <div className="vprogress-container">
+                <div className="vprogress-track">
+                    <div className="vprogress-bar" style={{ height: '60%' }}></div>
+                </div>
+                </div>
+<div className="vprogress-indicator"></div></div>
+
+        
+
 
 
         {/* Left Side - Preview Image */}
@@ -287,7 +313,7 @@ function LandingPage() {
                 {title}
               </h1>
               <p className="text-base md:text-lg mb-[5%] max-w-[90%]">
-                {tagline}
+                {description}
               </p>
               <button className="submit-button py-[3%] px-[5%] text-base flex items-center gap-[2%]">
                 Explore Capabilities
@@ -303,4 +329,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default AboutUs;

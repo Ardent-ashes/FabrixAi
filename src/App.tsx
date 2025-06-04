@@ -17,6 +17,8 @@ import EmpoyeeDetailsOrg from "./components/pages/EmployeeDetailsOrg";
 import LogWithFB from "./components/pages/LoginWithFB";
 import FBAccess from "./components/pages/FBAccess";
 import Demo from "./components/pages/demo";
+import Land from "./components/pages//SetUp/LandingPage";
+import About from "./components/pages/SetUp/AboutUS";
 
 
 function App() {
@@ -40,6 +42,17 @@ function App() {
         <Route path="/loginwithfb" element={<LogWithFB />} />
         <Route path="/fbaccess" element={<FBAccess />} />
         <Route path="/demo" element={<Demo />} />
+        <Route path="/landing" element={<Land />} />
+        <Route path="/about" element={<About />} />
+        
+        {/* Add more routes as needed */}
+        {/* Example: <Route path="/about" element={<About />} /> */}
+        
+        {/* Add more routes as needed */}
+        {/* Example: <Route path="/about" element={<About />} /> */}
+        
+        {/* Add more routes as needed */}
+        {/* Example: <Route path="/about" element={<About />} /> */}
         
         {/* Add more routes as needed */}
         {/* Example: <Route path="/about" element={<About />} /> */}
