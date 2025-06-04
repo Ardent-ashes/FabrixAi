@@ -1,26 +1,28 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-// Placeholder for actual image imports
-// import heroImage from "../../assets/hero-bg.jpg";
-// import logoImage from "../../assets/logo.png";
+
+
 
 function Certification() {
   const [title, setTitle] = useState('Crafting Quality, Building Trust');
-  const [description, setdescription] = useState(' Discover our commitment to excellence and innovation. Explore our capabilities and see how we can help you achieve your goals.');
-  const [mission, setMission] = useState(' Global Approval partner you can trust');
-    const [vision, setVision] = useState(' Global Approval partner you can trust');
+  const [description] = useState(' Discover our commitment to excellence and innovation. Explore our capabilities and see how we can help you achieve your goals.');
+     const navigate = useNavigate();
 
 
   const [logo, setLogo] = useState<string | null>(null);
-  const [banner, setBanner] = useState<string | null>(null);
-  const [showPreview, setShowPreview] = useState(false);
+  const [banner] = useState<string | null>(null);
+  const [showPreview] = useState(false);
 
   const handleBack = () => {
-    console.log('Navigate back');
+    // console.log('Navigate back');
+        navigate('/clients'); // Navigate to the landing page
+
   };
 
   const handlePreview = () => {
-    setShowPreview(!showPreview);
+    // setShowPreview(!showPreview);
+    navigate('/gallery'); // Navigate to the gallery page
   };
 
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,18 +38,6 @@ function Certification() {
     }
   };
 
-  const handleBannerUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event: ProgressEvent<FileReader>) => {
-        if (event.target?.result) {
-          setBanner(event.target.result as string);
-        }
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
   const handleExternalRedirect = (url: string | URL | undefined) => {
     window.open(url, '_blank');

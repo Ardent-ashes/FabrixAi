@@ -14,8 +14,7 @@ function Login() {
 
   const handleLogin = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    // Here you would typically handle the login logic
-    // For now, just navigate to dashboard or home page
+   
     navigate('/usertype');
   };
 
@@ -28,7 +27,6 @@ function Login() {
   };
 
   const handleForgotPassword = () => {
-    // Navigate to forgot password page or open modal
     navigate('/forgot-password');
   };
 

@@ -6,7 +6,7 @@ function About() {
   const navigate = useNavigate();
   
   const handleClick = () => {
-    navigate('/');
+    navigate('/landing');
   };
 
   return (
@@ -25,14 +25,14 @@ function About() {
         
         <div className="w-[70%] max-w-6xl p-6">
   <div 
-    className="h-2 relative overflow-hidden mt-4 shadow-lg" // adds margin top and shadow
+    className="h-2 relative overflow-hidden mt-4 shadow-lg" 
     style={{
       background: 'linear-gradient(90deg, #ffffff 0%, #f9c74f 100%)',
       borderRadius: '1px',
-      boxShadow: '0 0 8px 2px rgba(249, 199, 79, 0.6)' // soft yellow glow
+      boxShadow: '0 0 8px 2px rgba(249, 199, 79, 0.6)' 
     }}
   >
-    {/* Animated shimmer effect with yellow tint */}
+    {/* effect  */}
     <div 
       className="absolute inset-0 h-full"
       style={{

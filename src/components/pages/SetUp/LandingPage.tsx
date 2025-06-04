@@ -1,22 +1,23 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-// Placeholder for actual image imports
-// import heroImage from "../../assets/hero-bg.jpg";
-// import logoImage from "../../assets/logo.png";
+
 
 function LandingPage() {
+   const navigate = useNavigate();
   const [title, setTitle] = useState('Global Apparel Partner You Can Trust');
   const [tagline, setTagline] = useState('Delivering Excellence in Garment Manufacturing Since 1985.');
   const [logo, setLogo] = useState<string | null>(null);
   const [banner, setBanner] = useState<string | null>(null);
-  const [showPreview, setShowPreview] = useState(false);
+  const [showPreview] = useState(false);
 
-  const handleBack = () => {
-    console.log('Navigate back');
-  };
+  // const handleBack = () => {
+  //   console.log('Navigate back');
+  // };
 
   const handlePreview = () => {
-    setShowPreview(!showPreview);
+    // setShowPreview(!showPreview);
+    navigate('/about');
   };
 
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -130,7 +131,8 @@ function LandingPage() {
         <div className="flex flex-col w-full lg:w-[30%] min-w-[300px] max-w-full mx-auto ">
           <div  className="flex pb-[10%] z-10">
            <button
-              onClick={handleBack}
+              // 
+              onClick={() => navigate('/complete')}
               className="back-button w-[15%] py-[1%] px-[1%] transition-all"
             >
               Back
@@ -143,12 +145,12 @@ function LandingPage() {
           </div>
 
           {/* Form Container */}
-          <div className='pb-[2%]'>
+          <div className='pb-[2%] z-20'>
           <div className="form-container lg:h-[90%]">
             <div className="space-y-[1%] p-[1%]">
               {/* Title Input */}
               <div>
-                <label htmlFor="title" className="form-label">Title</label>
+                <label htmlFor="title" className="form-label z-20">Title</label>
                 <textarea
                   id="title"
                   value={title}
@@ -201,7 +203,7 @@ function LandingPage() {
 
               
               {/* File Upload Sections */}
-              <div className="space-y-[4%] pt-[4%]">
+              <div className="space-y-[4%] pt-[4%] z-20">
                 <div className='form-container flex flex-col gap-[10%]'>
                 {/* Logo Upload */}
                 <div className="pb-[4%]">
@@ -276,7 +278,7 @@ function LandingPage() {
           <div
             className="w-full h-[400px] md:h-[500px] lg:h-[800px] rounded-[3%] relative overflow-hidden shadow-2xl"
             style={{
-              backgroundImage: banner ? `url(${banner})` : 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%)',
+              backgroundImage: banner ? `url(${banner})` : 'linear-gradient(135deg, #1e3a8a 0%,rgb(11, 23, 41) 50%,rgb(10, 17, 26) 100%)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}

@@ -27,7 +27,6 @@ function CustomDomainPage() {
   };
 
   const handleBuildWithUs = () => {
-    // Handle build with us action
     navigate('/customdomain');
   };
 

@@ -12,9 +12,9 @@ function AccountTypeSelection() {
     localStorage.setItem('userType', type);
 
     if (type === 'personal') {
-      navigate('/employeedetails'); // 👈 Route for personal
+      navigate('/employeedetails'); 
     } else {
-      navigate('/employeedetailsorg'); // 👈 Route for others
+      navigate('/employeedetailsorg'); 
     }
   };
 

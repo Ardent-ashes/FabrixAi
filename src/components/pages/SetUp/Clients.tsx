@@ -3,27 +3,24 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function AboutUs() {
+function Clients() {
   const [title, setTitle] = useState('Crafting Quality, Building Trust');
-  const [description, setdescription] = useState(' Discover our commitment to excellence and innovation. Explore our capabilities and see how we can help you achieve your goals.');
-  const [mission, setMission] = useState(' Global Approval partner you can trust');
-    const [vision, setVision] = useState(' Global Approval partner you can trust');
-   const navigate = useNavigate();
+  const [description] = useState(' Discover our commitment to excellence and innovation. Explore our capabilities and see how we can help you achieve your goals.');
+       const navigate = useNavigate();
 
 
   const [logo, setLogo] = useState<string | null>(null);
-  const [banner, setBanner] = useState<string | null>(null);
+  const [banner] = useState<string | null>(null);
   const [showPreview] = useState(false);
 
   const handleBack = () => {
     // console.log('Navigate back');
-    navigate('/landing');
+    navigate('/service'); // Navigate to the previous page (Services)
   };
 
   const handlePreview = () => {
     // setShowPreview(!showPreview);
-        navigate('/service');
-
+    navigate('/certification'); // Navigate to the Gallery page for preview
   };
 
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,18 +36,7 @@ function AboutUs() {
     }
   };
 
-  const handleBannerUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event: ProgressEvent<FileReader>) => {
-        if (event.target?.result) {
-          setBanner(event.target.result as string);
-        }
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+
 
   const handleExternalRedirect = (url: string | URL | undefined) => {
     window.open(url, '_blank');
@@ -133,9 +119,9 @@ function AboutUs() {
       >
        
 
-        {/* Right Side */}
-        <div className="flex flex-col w-full lg:w-[30%] min-w-[300px] max-w-full mx-auto ">
-          <div  className="flex pb-[10%] z-10">
+        {/* left Side */}
+        <div className="flex flex-col w-full lg:w-[30%] min-w-[300px] max-w-full mx-auto z-20 ">
+          <div  className="flex pb-[10%] ">
            <button
               onClick={handleBack}
               className="back-button w-[15%] py-[1%] px-[1%] transition-all"
@@ -146,7 +132,7 @@ function AboutUs() {
           {/* Header */}
           <div className="flex items-center justify-center gap-[3%] mb-[5%]">
             
-            <h1 className=" items-center justify-center text-center text-3xl md:text-4xl font-bold text-[#EAB308]">About Us</h1>
+            <h1 className=" items-center justify-center text-center text-3xl md:text-4xl font-bold text-[#EAB308]">Clients</h1>
           </div>
 
           {/* Form Container */}
@@ -155,7 +141,7 @@ function AboutUs() {
             <div className="space-y-[1%] p-[1%]">
               {/* Title Input */}
               <div >                      
-                <label htmlFor="title" className="form-label">Title</label>
+                <label htmlFor="title" className="form-label">Client Name</label>
                 <textarea
                   id="title"
                   value={title}
@@ -167,48 +153,34 @@ function AboutUs() {
                 />
               </div>
 
-              {/* description Input */}
-              <div>
-                <label htmlFor="description" className="form-label">Description</label>
-                <textarea
-                  id="description"
-                  value={description}
-                  onChange={(e) => setdescription(e.target.value)}
-                  className="form-input w-full text-base md:text-lg resize-none"
-                  placeholder="Enter your description"
-                  rows={2}
-                  style={{ minHeight: '60px', padding: '10px' }}
-                />
-              </div>
+              <div className="pt-[4%]">
+                <div className="custom-box-dotted pb-[2%]">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleLogoUpload}
+                    className="hidden"
+                    id="logo-upload"
+                  />
+                  <label
+                    htmlFor="logo-upload"
+                    className="flex flex-col items-center justify-center cursor-pointer h-[20px] text-[#808080] hover:text-white transition-colors"
+                  >
+                    {logo ? (
+                      <img src={logo} alt="Logo Preview" className="max-h-[60px] max-w-full object-contain" />
+                    ) : (
+                      <>
+                      
+                        <span className="text-center">Upload Clients LOGO here</span>
+                      </>
+                    )}
+                  </label>
+                </div>
+                </div>
 
-              {/* description Input */}
-              <div>
-                <label htmlFor="mission" className="form-label">Mission</label>
-                <textarea
-                  id="mission"
-                  value={mission}
-                  onChange={(e) => setMission(e.target.value)}
-                  className="form-input w-full text-base md:text-lg resize-none"
-                  placeholder="Enter your description"
-                  rows={2}
-                  style={{ minHeight: '60px', padding: '10px' }}
-                />
-              </div>
+              
 
-               {/* description Input */}
-              <div>
-                <label htmlFor="vision" className="form-label">Vision</label>
-                <textarea
-                  id="vision"
-                  value={vision}
-                
-                  onChange={(e) => setVision(e.target.value)}
-                  className="form-input w-full text-base md:text-lg resize-none"
-                  placeholder="Enter your description"
-                  rows={2}
-                  style={{ minHeight: '60px', padding: '10px' }}
-                />
-              </div>
+             
                 </div>
                 </div>
                 </div>
@@ -219,8 +191,9 @@ function AboutUs() {
 
               
               {/* File Upload Sections */}
-              <div className="space-y-[4%] pt-[4%] z-20">
-                <div className='form-container flex flex-col gap-[10%]'>
+             
+              <div className="space-y-[4%] pt-[4%]">
+                <div className=' flex flex-col gap-[10%]'>
                 {/* Logo Upload */}
                 <div className="pb-[4%]">
                 <div className="custom-box-dotted p-[4%] pb-[2%]">
@@ -233,43 +206,21 @@ function AboutUs() {
                   />
                   <label
                     htmlFor="logo-upload"
-                    className="flex flex-col items-center justify-center cursor-pointer h-[40px] text-[#808080] hover:text-white transition-colors"
+                    className="flex flex-col items-center justify-center cursor-pointer h-[40px] text-[#EAB308] hover:text-white transition-colors"
                   >
                     {logo ? (
-                      <img src={logo} alt="Logo Preview" className="max-h-[60px] max-w-full object-contain" />
+                      <img src={logo} alt="Logo Preview" className="max-h-[60px] max-w-full object-contain " />
                     ) : (
                       <>
                       
-                        <span className="text-center">Upload a Intro Video here/ Drag into the box</span>
+                        <span className="text-center">Add more Clients</span>
                       </>
                     )}
                   </label>
                 </div>
                 </div>
 
-                {/* Banner Upload */}
-                <div className="custom-box-dotted p-[4%]">
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleBannerUpload}
-                    className="hidden"
-                    id="banner-upload"
-                  />
-                  <label
-                    htmlFor="banner-upload"
-                    className="flex flex-col items-center justify-center cursor-pointer h-[40px] text-[#808080] hover:text-white transition-colors"
-                  >
-                    {banner ? (
-                      <img src={banner} alt="Banner Preview" className="max-h-[60px] max-w-full object-contain" />
-                    ) : (
-                      <>
-                        
-                        <span className="text-center">Upload an Image about your business here/ Drag into the box</span>
-                      </>
-                    )}
-                  </label>
-                </div>
+                
                 </div>
               </div>
 
@@ -282,12 +233,12 @@ function AboutUs() {
                 >
                   Preview
                 </button>
-              </div>
+              </div>            
               
             
         
         </div>
-         <div className="flex flex-col pt-[20%] "> <div className="vprogress-container">
+         <div className="flex flex-col pt-[10%] "> <div className="vprogress-container">
                 <div className="vprogress-track">
                     <div className="vprogress-bar" style={{ height: '60%' }}></div>
                 </div>
@@ -331,4 +282,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default Clients;
