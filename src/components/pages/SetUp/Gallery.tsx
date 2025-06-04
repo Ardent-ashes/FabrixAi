@@ -1,11 +1,14 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 function Gallery() {
   const [title, setTitle] = useState('Crafting Quality, Building Trust');
   const [description] = useState(' Discover our commitment to excellence and innovation. Explore our capabilities and see how we can help you achieve your goals.');
-  
+         const navigate = useNavigate();
+
 const [images, setImages] = useState<string[]>([]);
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -28,14 +31,17 @@ const [images, setImages] = useState<string[]>([]);
 
   const [logo, setLogo] = useState<string | null>(null);
   const [banner] = useState<string | null>(null);
-  const [showPreview, setShowPreview] = useState(false);
+  const [showPreview] = useState(false);
 
   const handleBack = () => {
-    console.log('Navigate back');
+    // console.log('Navigate back');
+        navigate('/certification'); // Navigate to the previous page (Services)
+
   };
 
   const handlePreview = () => {
-    setShowPreview(!showPreview);
+    // setShowPreview(!showPreview);
+    navigate('/setup');
   };
 
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {

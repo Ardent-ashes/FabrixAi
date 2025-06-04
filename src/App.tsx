@@ -23,6 +23,12 @@ import Service from "./components/pages/SetUp/Services";
 import Clients from "./components/pages/SetUp/Clients.tsx";
 import Certification from "./components/pages/SetUp/Certification.tsx";
 import Gallery from "./components/pages/SetUp/Gallery.tsx";
+import Set from "./components/pages/SetUp/SetUp.tsx";
+import PaymentInfo from "./components/pages/SetUp/PaymentInfo.tsx";
+
+import PaymentPlan from "./components/pages/SetUp/PaymentPlan.tsx";
+
+
 
 
 function App() {
@@ -52,6 +58,9 @@ function App() {
         <Route path="/clients" element={<Clients />} />
         <Route path="/certification" element={<Certification/>}/>
         <Route path="/gallery" element={<Gallery/>} />
+        <Route path="/setup" element={<Set />} />
+        <Route path="/paymentinfo" element={<PaymentInfo/>} />
+        <Route path="/paymentplan" element={<PaymentPlan/>}/>
 
         
         {/* Add more routes as needed */}
