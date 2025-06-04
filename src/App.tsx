@@ -19,6 +19,10 @@ import FBAccess from "./components/pages/FBAccess";
 import Demo from "./components/pages/demo";
 import Land from "./components/pages//SetUp/LandingPage";
 import About from "./components/pages/SetUp/AboutUS";
+import Service from "./components/pages/SetUp/Services";
+import Clients from "./components/pages/SetUp/Clients.tsx";
+import Certification from "./components/pages/SetUp/Certification.tsx";
+import Gallery from "./components/pages/SetUp/Gallery.tsx";
 
 
 function App() {
@@ -44,6 +48,11 @@ function App() {
         <Route path="/demo" element={<Demo />} />
         <Route path="/landing" element={<Land />} />
         <Route path="/about" element={<About />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/clients" element={<Clients />} />
+        <Route path="/certification" element={<Certification/>}/>
+        <Route path="/gallery" element={<Gallery/>} />
+
         
         {/* Add more routes as needed */}
         {/* Example: <Route path="/about" element={<About />} /> */}

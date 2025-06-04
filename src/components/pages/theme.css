@@ -348,7 +348,7 @@ box-shadow: 0 0 1px #EAB308, 0 0 2px #EAB308;
 }
 
 .custom-box-dotted {
-      background: linear-gradient(93.88deg, rgba(41, 54, 79, 0.25) 1.31%, rgba(70, 85, 113, 0.25) 97.47%);
+      background: linear-gradient(93.88deg, rgb(27, 44, 77) 1.31%, rgba(34, 53, 92, 1) 97.47%);
       backdrop-filter: blur(61.400001525878906px);
 
       /* box-shadow: 0px 0px 8.7px 0px #4A6490; */
