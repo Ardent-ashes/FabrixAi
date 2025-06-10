@@ -345,7 +345,7 @@ box-shadow: 0 0 1px #EAB308, 0 0 2px #EAB308;
       background: linear-gradient(93.88deg, rgb(27, 44, 77) 1.31%, rgba(34, 53, 92, 1) 97.47%);
       backdrop-filter: blur(61.400001525878906px);
 
-  border-radius: 1rem; 
+  border-radius: 0.5rem; 
   padding: 3%;
   border: 1px solid #EAB308; 
   border-style: dashed;

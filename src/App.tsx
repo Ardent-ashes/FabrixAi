@@ -27,6 +27,7 @@ import Set from "./components/pages/SetUp/SetUp.tsx";
 import PaymentInfo from "./components/pages/SetUp/PaymentInfo.tsx";
 
 import PaymentPlan from "./components/pages/SetUp/PaymentPlan.tsx";
+import PaymentOptions from "./components/pages/SetUp/PaymentOption";
 
 
 
@@ -61,6 +62,9 @@ function App() {
         <Route path="/setup" element={<Set />} />
         <Route path="/paymentinfo" element={<PaymentInfo/>} />
         <Route path="/paymentplan" element={<PaymentPlan/>}/>
+        <Route path="/paymentoption" element={<PaymentOptions/>}/>
+
+        
 
         
         {/* Add more routes as needed */}

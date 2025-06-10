@@ -129,7 +129,7 @@ export default function SelectPlansPage() {
                   <p className="text-gray-300 text-sm">{plan.subtitle}</p>
                 )}
                 
-                <div className="mt-4 mb-2">
+                <div className=" mt-4 mb-2">
                   <span className="text-gray-400 text-sm">$</span>
                   <span className="text-3xl font-bold text-white">
                     {getCurrentPrice(plan)}
@@ -210,7 +210,7 @@ export default function SelectPlansPage() {
           {/* Continue Section */}
           <div className="text-center">
             <p className="text-[#EAB308] text-sm mb-3">Get 10% off by billing YEARLY</p>
-            <button className="bg-[#EAB308] text-blue-900 px-8 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition-colors">
+            <button onClick={() => navigate('/PaymentOption')} className="bg-[#EAB308] text-blue-900 px-8 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition-colors">
               Continue
             </button>
           </div>
