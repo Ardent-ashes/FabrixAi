@@ -80,9 +80,9 @@ function PaymentOptions() {
             </div>
 
           {/* Header */}
-          <div className="flex items-center justify-center gap-[3%] mb-[5%]">
+          <div className="flex items-center  gap-[3%] mb-[5%]">
             
-            <h1 className=" items-center justify-center text-center text-3xl md:text-4xl font-bold text-[#EAB308]">Payement Options</h1>
+            <h1 className=" items-center justify-center text-center text-3xl md:text-4xl font-bold text-[#EAB308]">Payment Options</h1>
           </div>
 
           {/* Payment Methods */}
@@ -97,10 +97,12 @@ function PaymentOptions() {
               <div className=" flex items-center justify-between">
                 <span className="text-white text-lg font-medium">Card</span>
                 <div className="flex gap-2">
-                  <div className="w-8 h-6 bg-blue-600 rounded flex items-center justify-center text-white text-xs font-bold">VISA</div>
-                  <div className="w-8 h-6 bg-blue-700 rounded flex items-center justify-center text-white text-xs font-bold">AE</div>
-                  <div className="w-8 h-6 bg-red-600 rounded flex items-center justify-center text-white text-xs font-bold">MC</div>
-                  <div className="w-8 h-6 bg-blue-800 rounded flex items-center justify-center text-white text-xs font-bold">UP</div>
+                  <div className="w-12 h-6   flex items-center  "><img src='../../../../src/assets/visa.png'></img></div>
+                  <div className="w-12 h-6   flex items-center  "><img src='../../../../src/assets/AE.png'></img></div>
+                <div className="w-12 h-6   flex items-center  "><img src='../../../../src/assets/MasterCard.png'></img></div>
+                <div className="w-12 h-6   flex items-center  "><img src='../../../../src/assets/UPay.png'></img></div>
+
+                 
                 </div>
               </div>
             </div>
@@ -133,10 +135,8 @@ function PaymentOptions() {
               <div className="flex items-center justify-between">
                 <span className="text-white text-lg font-medium">Gpay</span>
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                    <span className="text-blue-600 font-bold text-sm">G</span>
-                  </div>
-                  <span className="text-white font-semibold">Pay</span>
+                  
+                <div className="w-12 h-6   flex items-center  "><img src='../../../../src/assets/GPay.png'></img></div>
                 </div>
               </div>
             </div>
